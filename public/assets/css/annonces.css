@@ -1,0 +1,202 @@
+
+
+.card {
+ overflow: hidden;
+ background-color: #fff;
+ padding:0;
+ box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+ transition: box-shadow 0.3s;
+
+}
+
+.card:last-of-type {
+    margin-right: 0;
+}
+.card a {
+   color: inherit;
+   text-decoration: none; }
+
+.card:hover {
+ box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3); }
+
+.card_date {
+ position: absolute;
+ right: 0;
+ border-radius: 3px;
+ top: -25px;
+ height: 25px;
+ padding: 0 15px;
+ color: #FFF;
+ font-size: 11px;
+ line-height: 25px;
+ background-color: #333A4D; }
+
+
+.card__thumb {
+   height: 200px;
+    overflow: hidden;
+    background-color: #000;
+    transition: height 0.3s;
+}
+     
+   opacity: 1;
+   transition: opacity 0.3s, -webkit-transform 0.3s;
+   transition: opacity 0.3s, transform 0.3s;
+   -webkit-transform: scale(1);
+       -ms-transform: scale(1);
+           transform: scale(1); }
+ .card:hover .card__thumb img {
+   opacity: 0.6;
+   -webkit-transform: scale(1.2);
+       -ms-transform: scale(1.2);
+           transform: scale(1.2); }
+ .card:hover .card__thumb {
+   height: 90px; }
+
+.card__body {
+    position: relative;
+    padding: 20px;
+    height: 250px;
+    transition: height 0.3s;
+}
+
+.card__category {
+ position: absolute;
+ left: 0;
+ border-radius: 3px;
+ top: -25px;
+ height: 25px;
+ padding: 0 15px;
+ color: #FFF;
+ font-size: 11px;
+ line-height: 25px;
+ text-transform: uppercase;
+ background-color: #333A4D; }
+
+.card__title {
+ margin: 0;
+ padding: 0 0 10px 0;
+ font-size: 22px;
+ color: #07A6E2;
+ font-weight: bold; }
+ .card:hover .card__title {
+   -webkit-animation: titleBlur 0.3s;
+           animation: titleBlur 0.3s; }
+
+.card__subtitle {
+ margin: 0;
+ padding: 0 0 10px 0;
+ font-size: 19px;
+ color: #07A6E2; }
+ .card:hover .card__subtitle {
+   -webkit-animation: subtitleBlur 0.3s;
+           animation: subtitleBlur 0.3s; }
+
+.card__description {
+
+ overflow: hidden;
+ margin: 0;
+ max-height: 190px;
+ padding: 0;
+ color: #666C74;
+ font-size: 14px;
+ line-height: 27px;
+ opacity: 0;
+ transition: opacity 0.2s, -webkit-transform 0.2s;
+ transition: opacity 0.2s, transform 0.2s;
+ transition-delay: 0s;
+
+ -webkit-transform: translateY(25px);
+     -ms-transform: translateY(25px);
+         transform: translateY(25px); }
+
+.card:hover .card__description {
+opacity: 1;
+transition-delay: 0.1s;
+-webkit-transform: translateY(0);
+   -ms-transform: translateY(0);
+       transform: translateY(0); }
+
+.card__footer {
+ position: absolute;
+ bottom: 20px;
+ left: 20px;
+ right: 20px;
+ font-size: 15px;
+ color: #A3A9AB; }
+ .card__footer .icon--comment {
+   margin-left: 12px; }
+
+@-webkit-keyframes titleBlur {
+ 0% {
+   opacity: 0.6;
+   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6); }
+
+ 100% {
+   opacity: 1;
+   text-shadow: 0px 5px 5px transparent; } }
+
+@keyframes titleBlur {
+ 0% {
+   opacity: 0.6;
+   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6); }
+
+ 100% {
+   opacity: 1;
+   text-shadow: 0px 5px 5px transparent; } }
+
+@-webkit-keyframes subtitleBlur {
+ 0% {
+   opacity: 0.6;
+   text-shadow: 0px 5px 5px rgba(56, 196, 165, 0.6); }
+
+ 100% {
+   opacity: 1;
+   text-shadow: 0px 5px 5px rgba(56, 196, 165, 0); } }
+
+@keyframes subtitleBlur {
+ 0% {
+   opacity: 0.6;
+   text-shadow: 0px 5px 5px rgba(56, 196, 165, 0.6); }
+
+ 100% {
+   opacity: 1;
+   text-shadow: 0px 5px 5px rgba(56, 196, 165, 0); } }
+
+   .fadeout {
+   position: relative;
+   bottom: 10em;
+   height: 10em;
+   background: -webkit-linear-gradient(
+       rgba(255, 255, 255, 0) 0%,
+       rgba(255, 255, 255, 1) 100%
+   );
+   background-image: -moz-linear-gradient(
+       rgba(255, 255, 255, 0) 0%,
+       rgba(255, 255, 255, 1) 100%
+   );
+   background-image: -o-linear-gradient(
+       rgba(255, 255, 255, 0) 0%,
+       rgba(255, 255, 255, 1) 100%
+   );
+   background-image: linear-gradient(
+       rgba(255, 255, 255, 0) 0%,
+       rgba(255, 255, 255, 1) 100%
+   );
+   background-image: -ms-linear-gradient(
+       rgba(255, 255, 255, 0) 0%,
+       rgba(255, 255, 255, 1) 100%
+   );
+}
+
+@media all and (max-width: 640px) {
+  .card__thumb {
+  height: 120px;
+}
+  .card__body {
+   height: 300px;
+}
+.card__title {
+ font-size: 16px;
+}
+}
